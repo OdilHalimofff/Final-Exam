@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: node-printer
+spec:
+  schedule: "*/2 * * * *"
+  jobTemplate:
+    spec:
+      parallelism: 5
+      completions: 10
+      template:
+        spec:
+          containers:
+          - name: node-printer
+            image: busybox
+            command: ["/bin/sh", "-c", "echo Running on node: $(node1) && sleep 120"]
+            env:
+            - name: node1
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          restartPolicy: OnFailure

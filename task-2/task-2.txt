@@ -1,0 +1,28 @@
+NAMESPACE    NAME     READY   STATUS             RESTARTS         AGE   IP              NODE    NOMINATED NODE   READINESS GATES
+abdulaziz    nginx1   1/1     Running            0                56m   10.233.66.85    node2   <none>           <none>
+abdulaziz    nginx2   1/1     Running            0                56m   10.233.66.88    node2   <none>           <none>
+alisher      nginx1   1/1     Running            0                39m   10.233.67.42    node3   <none>           <none>
+asilbek      nginx1   1/1     Running            0                56m   10.233.66.87    node2   <none>           <none>
+asilbek      nginx2   1/1     Running            0                56m   10.233.68.92    node4   <none>           <none>
+asrorbek     nginx1   1/1     Running            0                60m   10.233.66.82    node2   <none>           <none>
+asrorbek     nginx2   1/1     Running            0                59m   10.233.66.83    node2   <none>           <none>
+azizbek      nginx1   1/1     Running            0                56m   10.233.66.89    node2   <none>           <none>
+azizbek      nginx2   1/1     Running            0                56m   10.233.68.93    node4   <none>           <none>
+bekhzod      nginx1   1/1     Running            0                45m   10.233.68.124   node4   <none>           <none>
+bekhzod      nginx2   1/1     Running            0                44m   10.233.68.129   node4   <none>           <none>
+dilshod      nginx1   0/1     CrashLoopBackOff   14 (108s ago)    48m   10.233.68.113   node4   <none>           <none>
+dilshod      nginx2   0/1     CrashLoopBackOff   12 (2m58s ago)   39m   10.233.68.141   node4   <none>           <none>
+doniyorbek   nginx1   1/1     Running            0                33m   10.233.67.49    node3   <none>           <none>
+doniyorbek   nginx2   1/1     Running            0                32m   10.233.66.99    node2   <none>           <none>
+farhod       nginx1   1/1     Running            0                44m   10.233.68.128   node4   <none>           <none>
+farhod       nginx2   1/1     Running            0                44m   10.233.68.130   node4   <none>           <none>
+ismoil       nginx1   1/1     Running            0                54m   10.233.68.98    node4   <none>           <none>
+ismoil       nginx2   1/1     Running            0                54m   10.233.68.99    node4   <none>           <none>
+negmatov     nginx1   1/1     Running            0                55m   10.233.68.94    node4   <none>           <none>
+negmatov     nginx2   1/1     Running            0                55m   10.233.68.95    node4   <none>           <none>
+otabek       nginx1   1/1     Running            0                50m   10.233.68.103   node4   <none>           <none>
+otabek       nginx2   1/1     Running            0                50m   10.233.68.105   node4   <none>           <none>
+sirojiddin   nginx1   1/1     Running            0                56m   10.233.66.86    node2   <none>           <none>
+sirojiddin   nginx2   1/1     Running            0                55m   10.233.68.96    node4   <none>           <none>
+zafar        nginx1   1/1     Running            0                49m   10.233.68.111   node4   <none>           <none>
+zafar        nginx2   1/1     Running            0                48m   10.233.68.114   node4   <none>           <none>

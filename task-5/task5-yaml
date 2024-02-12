@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        volumeMounts:
+        - name: config-volume
+          mountPath: /usr/share/nginx/html
+        env:
+        - name: AUTHOR
+          valueFrom:
+            configMapKeyRef:
+              name: config-info
+              key: AUTHOR
+        - name: EXAM_TYPE
+          valueFrom:
+            configMapKeyRef:
+              name: config-info
+              key: EXAM_TYPE
+      volumes:
+      - name: config-volume
+        configMap:
+          name: config-info
+          items:
+          - key: AUTHOR
+            path: index.html
+            mode: 0777

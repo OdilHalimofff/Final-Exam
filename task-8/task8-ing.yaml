@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: final-exam-ingress
+  namespace: zafar
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: zafar.nvrbckdown.uz
+    http:
+      paths:
+      - path: /final
+        pathType: Prefix
+        backend:
+          service:
+            name: final-exam-service
+            port:
+              number: 80

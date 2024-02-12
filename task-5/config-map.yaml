@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-info
+data:
+  AUTHOR: "zafar"
+  EXAM_TYPE: "Final Exam"
