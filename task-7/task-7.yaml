@@ -5,7 +5,7 @@ metadata:
   namespace: zafar
 spec:
   selector:
-    app: flask-app
+    app: final-exam
   ports:
     - protocol: TCP
       port: 5000

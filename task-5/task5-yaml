@@ -1,23 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  creationTimestamp: null
+  labels:
+    app: nginx
+  name: nginx
+  namespace: zafar
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: nginx
+  strategy: {}
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx
-        volumeMounts:
-        - name: config-volume
-          mountPath: /usr/share/nginx/html
+      - image: nginx
+        name: nginx
+        command:
+          - "/bin/bash"
+          - "-c"
+          - "echo My name is $AUTHOR and this is my $EXAM_TYPE"
         env:
         - name: AUTHOR
           valueFrom:
@@ -29,11 +36,4 @@ spec:
             configMapKeyRef:
               name: config-info
               key: EXAM_TYPE
-      volumes:
-      - name: config-volume
-        configMap:
-          name: config-info
-          items:
-          - key: AUTHOR
-            path: index.html
-            mode: 0777
+

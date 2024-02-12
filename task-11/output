@@ -1,0 +1,9 @@
+NAME                            DESIRED   CURRENT   READY   AGE
+final-exam-68d5b69975           0         0         0       20m
+final-exam-8488c8cfc5           1         1         1       144m
+final-exam-c8c4b5d97            1         1         0       14m
+final-exam-host-7fcb464b4       1         1         1       70m
+flask-application-6b6d5bdf59    2         2         2       168m
+frontend-something-765656684d   1         1         1       102m
+nginx-7d4fd7b9bd                1         1         0       24m
+nginx-deployment-5fc9c7c47      1         1         1       159m

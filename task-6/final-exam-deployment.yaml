@@ -17,8 +17,11 @@ spec:
       - name: flask-app
         image: nvrbckdown/flask-app:final-exam
         env:
-        - name: zafar
-          value: "zafar"
+        - name: AUTHOR
+          valueFrom:
+            configMapKeyRef:
+              name: config-info
+              key: AUTHOR
         - name: POD
           valueFrom:
             fieldRef:

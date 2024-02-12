@@ -4,16 +4,16 @@ metadata:
   name: final-exam-ingress
   namespace: zafar
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: nginx
 spec:
   rules:
   - host: zafar.nvrbckdown.uz
     http:
       paths:
-      - path: /final
+      - path: /
         pathType: Prefix
         backend:
           service:
-            name: final-exam-service
+            name: final-exam
             port:
-              number: 80
+              number: 5000

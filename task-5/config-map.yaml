@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: config-info
+  namespace: zafar
 data:
-  AUTHOR: "zafar"
+  AUTHOR: Zafar
   EXAM_TYPE: "Final Exam"
